@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Taste Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="quiz-container">
+    <h1>What's Your Music Taste?</h1>
+    <input type="text" id="user-name" placeholder="Your name">
+    
+    
+    <div class="question">
+      <p> 1. Pick a mood: <p>
+      <button data-question="1" onclick="answer(1, 'Upbeat')"
+      class ="quiz-btn">Upbeat</button>
+      <button data-question="1" onclick="answer(1, 'Chill')"
+      class ="quiz-btn">Chill</button>
+    </div>
+    
+    <button id="submit-btn" onclick="generatePlaylist()">Get My Playlist!</button>
+  </div>
+
+  <div id="playlist-container" style="display:none;">
+    <h2>Hi, <span id="display-name"></span>! Your Playlist:</h2>
+    <div id="playlist"></div>
+    <audio id="audio-player" controls></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

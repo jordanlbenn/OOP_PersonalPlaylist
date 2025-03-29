@@ -1,0 +1,97 @@
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Light background for better contrast */
+}
+
+/* Quiz Container (initially visible) */
+#quiz-container {
+  display: block; /* Ensures it's visible by default */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Playlist Container (initially hidden) */
+#playlist-container {
+  display: none; /* Hidden until quiz submission */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.question {
+  margin: 20px 0;
+}
+
+/* Quiz Buttons */
+.quiz-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  background: #f0f0f0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover/select effects */
+}
+
+.quiz-btn:hover {
+  background: #e0e0e0;
+}
+
+.quiz-btn.selected {
+  background: #4CAF50;
+  color: white;
+  border-color: #45a049;
+}
+
+/* Song Items in Playlist */
+.song {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  margin: 10px 0;
+  background: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.song:hover {
+  background: #e0e0e0;
+}
+
+.song img {
+  border-radius: 5px;
+}
+
+/* Audio Player Styling */
+#audio-player {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Submit Button */
+#submit-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#submit-btn:hover {
+  background: #45a049;
+}

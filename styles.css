@@ -1,50 +1,52 @@
-
-/* styles.css */
+/* Dark Mode */
 body {
   font-family: Arial, sans-serif;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  background-color: #f9f9f9; /* Light background for better contrast */
+  background-color: #181818; /* Dark background */
+  color: #e0e0e0; /* Light text color for better contrast */
 }
 
-/* Quiz Container (initially visible) */
+/* Quiz Container */
 #quiz-container {
-  display: block; /* Ensures it's visible by default */
-  background: white;
+  display: block;
+  background: #2c2c2c; /* Dark background */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
 }
 
-/* Playlist Container (initially hidden) */
+/* Playlist Container */
 #playlist-container {
-  display: none; /* Hidden until quiz submission */
-  background: white;
+  display: none;
+  background: #2c2c2c;
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .question {
   margin: 20px 0;
+  color: #e0e0e0; /* Ensure questions are visible */
 }
 
 /* Quiz Buttons */
 .quiz-btn {
   padding: 10px 15px;
   margin: 5px;
-  background: #f0f0f0;
-  border: 2px solid #ddd;
+  background: #3c3c3c; /* Dark button background */
+  border: 2px solid #444;
   border-radius: 5px;
+  color: #e0e0e0;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth hover/select effects */
+  transition: all 0.3s ease;
 }
 
 .quiz-btn:hover {
-  background: #e0e0e0;
+  background: #505050; /* Slightly lighter on hover */
 }
 
 .quiz-btn.selected {
@@ -60,14 +62,14 @@ body {
   gap: 15px;
   padding: 10px;
   margin: 10px 0;
-  background: #f0f0f0;
+  background: #3c3c3c;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .song:hover {
-  background: #e0e0e0;
+  background: #505050;
 }
 
 .song img {
@@ -78,6 +80,9 @@ body {
 #audio-player {
   width: 100%;
   margin-top: 20px;
+  background-color: #2c2c2c; /* Dark player background */
+  border: none;
+  color: white;
 }
 
 /* Submit Button */
@@ -90,6 +95,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 #submit-btn:hover {

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Taste Quiz</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,40 +12,41 @@
     <input type="text" id="user-name" placeholder="Your name">
     
     <div class="question">
-      <p> 1. Pick a Mood </p>
+      <p>1. Pick a Mood</p>
       <button data-question="1" onclick="answer(event, 1, 'Upbeat')" class="quiz-btn">Upbeat</button>
       <button data-question="1" onclick="answer(event, 1, 'Chill')" class="quiz-btn">Chill</button>
       <button data-question="1" onclick="answer(event, 1, 'Sad')" class="quiz-btn">Sad</button>
       <button data-question="1" onclick="answer(event, 1, 'Energetic')" class="quiz-btn">Energetic</button>
-    
-      <p> 2. When listening to music, what's your go-to activity? </p>
+
+      <p>2. When listening to music, what's your go-to activity?</p>
       <button data-question="2" onclick="answer(event, 2, 'Working Out')" class="quiz-btn">Working Out</button>
       <button data-question="2" onclick="answer(event, 2, 'Studying/Working')" class="quiz-btn">Studying/Working</button>
       <button data-question="2" onclick="answer(event, 2, 'Driving')" class="quiz-btn">Driving</button>
       <button data-question="2" onclick="answer(event, 2, 'Relaxing')" class="quiz-btn">Relaxing</button>
-      
-      <p> 3. Which decade of music do you associate yourself with the most? </p>
-      <button data-question="3" onclick="answer(event, 3, '70s-80s')" class="quiz-btn">70s-80</button>
+
+      <p>3. Which decade of music do you associate yourself with the most?</p>
+      <button data-question="3" onclick="answer(event, 3, '70s-80s')" class="quiz-btn">70s-80s</button>
       <button data-question="3" onclick="answer(event, 3, '90s-2000s')" class="quiz-btn">90s-2000s</button>
       <button data-question="3" onclick="answer(event, 3, '2010s')" class="quiz-btn">2010s</button>
-      <button data-question="3" onclick="answer(event, 3, 'Today's Hits')" class="quiz-btn">Today's Hits</button>
-      
-      <p> 4. What type of lyrics do you prefer? </p>
+      <button data-question="3" onclick="answer(event, 3, 'Today\'s Hits')" class="quiz-btn">Today's Hits</button>
+
+      <p>4. What type of lyrics do you prefer?</p>
       <button data-question="4" onclick="answer(event, 4, 'Deep & Emotional')" class="quiz-btn">Deep & Emotional</button>
       <button data-question="4" onclick="answer(event, 4, 'Fun & Catchy')" class="quiz-btn">Fun & Catchy</button>
       <button data-question="4" onclick="answer(event, 4, 'I care more about the beat')" class="quiz-btn">I focus on the beat.</button>
-      
-      <p> 5. How do you discover new music? </p>
+
+      <p>5. How do you discover new music?</p>
       <button data-question="5" onclick="answer(event, 5, 'Friend Recommendations')" class="quiz-btn">Friend Recommendations</button>
       <button data-question="5" onclick="answer(event, 5, 'App Curated Playlists')" class="quiz-btn">App Curated Playlists</button>
       <button data-question="5" onclick="answer(event, 5, 'Shuffle/Random')" class="quiz-btn">Shuffle/Random</button>
-    </div> 
-    
+    </div>
+
     <button id="submit-btn" onclick="generatePlaylist()">Get My Playlist!</button>
   </div>
 
   <div id="playlist-container" style="display:none;">
-    <h2>Hi, <span id="display-name"></span>! Your Playlist:</h2>
+    <h2 id="playlist-name">Your Custom Playlist</h2>
+    <h3>Hi, <span id="display-name"></span>! Here's your playlist:</h3>
     <div id="playlist"></div>
     <audio id="audio-player" controls></audio>
   </div>

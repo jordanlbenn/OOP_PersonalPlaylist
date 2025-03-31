@@ -1,6 +1,6 @@
-let userAnswers = {};
+const userAnswers = {};
 
-// Handle answer selection and button interaction
+// Handles answer selection
 window.answer = function (event, questionId, choice) {
   userAnswers[questionId] = choice;
 
@@ -44,24 +44,31 @@ const playlists = {
   }
 };
 
-// generate playlist based on user answers
+// Generate playlist based on user answers
 window.generatePlaylist = function () {
   const userName = document.getElementById("user-name");
+  if (!userName) {
+    console.error("User name input field not found!");
+    return;
+  }
+
   const name = userName.value.trim();
   if (!name) {
     alert("Please enter your name!");
     return;
   }
 
+  console.log("User Answers Before Processing:", userAnswers);
+
   // Hide quiz, show playlist
   document.getElementById("quiz-container").style.display = "none";
   document.getElementById("playlist-container").style.display = "block";
   document.getElementById("display-name").textContent = name;
 
-  // Use a Set to prevent duplicates
-  let selectedSongsSet = new Set();
+  // Use a Map to store unique songs (keyed by title)
+  let selectedSongsMap = new Map();
 
-  // User choices
+  // User choices (set defaults if undefined)
   const answers = {
     mood: userAnswers[1] || "Upbeat",
     activity: userAnswers[2] || "Working Out",
@@ -70,14 +77,20 @@ window.generatePlaylist = function () {
     discover: userAnswers[5] || "Friend Recommendations"
   };
 
-  // Function to add songs to the Set
+  console.log("Processed Answers:", answers);
+
+  // Function to add unique songs
   function addSongs(category) {
-    if (category in playlists) {
-      playlists[category].songs.forEach(song => selectedSongsSet.add(JSON.stringify(song)));
+    if (playlists[category]) {
+      playlists[category].songs.forEach(song => {
+        if (!selectedSongsMap.has(song.title)) {
+          selectedSongsMap.set(song.title, song);
+        }
+      });
     }
   }
 
-  // Add songs based on the user's answers
+  // Add songs based on user choices
   addSongs(answers.mood);
   if (answers.activity === "Working Out") addSongs("Energetic");
   if (answers.activity === "Studying/Working") addSongs("Chill");
@@ -87,30 +100,45 @@ window.generatePlaylist = function () {
   if (answers.lyric === "Fun & Catchy") addSongs("Upbeat");
   if (answers.lyric === "I care more about the beat") addSongs("Energetic");
 
-  // Convert the Set back to an array of song objects
-  let selectedSongs = Array.from(selectedSongsSet).map(song => JSON.parse(song));
+  // Convert Map to an array
+  let selectedSongs = Array.from(selectedSongsMap.values());
 
-  // If there are fewer than 10 songs, add random songs to fill the playlist
+  console.log("Selected Songs Before Randomization:", selectedSongs);
+
+  // Fill up to 10 songs if necessary
   let allSongs = Object.values(playlists).flatMap(playlist => playlist.songs);
   while (selectedSongs.length < 10) {
     let randomSong = allSongs[Math.floor(Math.random() * allSongs.length)];
-    if (!selectedSongs.find(song => song.title === randomSong.title)) {
+    if (!selectedSongsMap.has(randomSong.title)) {
+      selectedSongsMap.set(randomSong.title, randomSong);
       selectedSongs.push(randomSong);
     }
   }
 
-  // Limit the total to 10 songs
+  // Limit to exactly 10 songs
   selectedSongs = selectedSongs.slice(0, 10);
 
-  // Display the playlist name
+  console.log("Final Selected Songs:", selectedSongs);
+
+  // Display playlist name
   document.getElementById("playlist-name").textContent = "Your Custom Playlist";
 
   // Render the playlist songs
   const playlistEl = document.getElementById("playlist");
   playlistEl.innerHTML = selectedSongs.map(song => `
     <div class="song">
-      <img src="${song.cover}" width="50">
+      <img src="${song.cover}" width="50" alt="${song.title} cover">
       <strong>${song.title}</strong> by ${song.artist}
     </div>
   `).join("");
 };
+
+// Ensure event listener is attached after DOM loads
+document.addEventListener("DOMContentLoaded", function () {
+  const submitBtn = document.getElementById("submit-btn");
+  if (submitBtn) {
+    submitBtn.addEventListener("click", generatePlaylist);
+  } else {
+    console.error("Submit button not found!");
+  }
+});

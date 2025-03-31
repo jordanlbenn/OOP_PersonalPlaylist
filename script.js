@@ -27,25 +27,22 @@ window.answer = function (event, questionId, choice) {
 // Playlist categories with names and songs
 const playlists = {
     Upbeat: {
-        name: "Sunshine Grooves ☀️",
         songs: [
             { title: "Blinding Lights", artist: "The Weeknd", cover: "/Albums/blindinglights.jpeg" },
             { title: "Feels Like Summer", artist: "Childish Gambino", cover: "/Albums/uptownfunk.jpeg" },
-            { title: "BE YOUR GIRL", artist: "Teedra Moses - KAYTRANADA Remix", cover: "/Albums/uptownfunk.jpeg" },
-            { title: "Sunshine", artist: "Steve Lacy feat. Fousheé", cover: "/Albums/uptownfunk.jpeg" }
+            { title: "BE YOUR GIRL", artist: "Teedra Moses - KAYTRANADA Remix", cover: "/Albums/beyourgirl.jpeg" },
+            { title: "Sunshine", artist: "Steve Lacy feat. Fousheé", cover: "/Albums/sunshine.jpeg" }
         ]
     },
     Chill: {
-        name: "Late Night Vibes 🌙",
         songs: [
-            { title: "Drake", artist: "Cece's Interlude", cover: "images/chill1.jpg" },
+            { title: "Cece's Interlude", artist: "Drake", cover: "images/chill1.jpg" },
             { title: "Awkward", artist: "SZA", cover: "images/chill2.jpg" },
             { title: "All I Want Is You", artist: "Miguel, J.Cole", cover: "/Albums/uptownfunk.jpeg" },
             { title: "The Way", artist: "Jill Scott", cover: "/Albums/uptownfunk.jpeg" }
         ]
     },
     Sad: {
-        name: "Rainy Day Feels ☔",
         songs: [
             { title: "Someone Like You", artist: "Adele", cover: "images/sad1.jpg" },
             { title: "Fix You", artist: "Coldplay", cover: "images/sad2.jpg" },
@@ -53,7 +50,6 @@ const playlists = {
         ]
     },
     Energetic: {
-        name: "Hype Mode 🔥",
         songs: [
             { title: "Yeah Glo!", artist: "GloRilla", cover: "images/energetic1.jpg" },
             { title: "Stronger", artist: "Kanye West", cover: "images/energetic2.jpg" },

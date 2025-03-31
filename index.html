@@ -24,31 +24,32 @@
       <button data-question="2" onclick="answer(event, 2, 'Driving')" class="quiz-btn">Driving</button>
       <button data-question="2" onclick="answer(event, 2, 'Relaxing')" class="quiz-btn">Relaxing</button>
 
-      <p>3. Which decade of music do you associate yourself with the most?</p>
-      <button data-question="3" onclick="answer(event, 3, '70s-80s')" class="quiz-btn">70s-80s</button>
-      <button data-question="3" onclick="answer(event, 3, '90s-2000s')" class="quiz-btn">90s-2000s</button>
+      <p>3. Pick a Decade</p>
       <button data-question="3" onclick="answer(event, 3, '2010s')" class="quiz-btn">2010s</button>
-      <button data-question="3" onclick="answer(event, 3, 'Today\'s Hits')" class="quiz-btn">Today's Hits</button>
+      <button data-question="3" onclick="answer(event, 3, '2000s')" class="quiz-btn">2000s</button>
+      <button data-question="3" onclick="answer(event, 3, '90s')" class="quiz-btn">90s</button>
+      <button data-question="3" onclick="answer(event, 3, '80s')" class="quiz-btn">80s</button>
 
-      <p>4. What type of lyrics do you prefer?</p>
+      <p>4. Choose a Lyric Preference</p>
       <button data-question="4" onclick="answer(event, 4, 'Deep & Emotional')" class="quiz-btn">Deep & Emotional</button>
       <button data-question="4" onclick="answer(event, 4, 'Fun & Catchy')" class="quiz-btn">Fun & Catchy</button>
-      <button data-question="4" onclick="answer(event, 4, 'I care more about the beat')" class="quiz-btn">I focus on the beat.</button>
+      <button data-question="4" onclick="answer(event, 4, 'I care more about the beat')" class="quiz-btn">I care more about the beat</button>
 
-      <p>5. How do you discover new music?</p>
+      <p>5. How do you usually discover new music?</p>
       <button data-question="5" onclick="answer(event, 5, 'Friend Recommendations')" class="quiz-btn">Friend Recommendations</button>
-      <button data-question="5" onclick="answer(event, 5, 'App Curated Playlists')" class="quiz-btn">App Curated Playlists</button>
-      <button data-question="5" onclick="answer(event, 5, 'Shuffle/Random')" class="quiz-btn">Shuffle/Random</button>
-    </div>
+      <button data-question="5" onclick="answer(event, 5, 'Online Playlists')" class="quiz-btn">Online Playlists</button>
+      <button data-question="5" onclick="answer(event, 5, 'Radio')" class="quiz-btn">Radio</button>
+      <button data-question="5" onclick="answer(event, 5, 'Social Media')" class="quiz-btn">Social Media</button>
 
-    <button id="submit-btn" type="button">Get My Playlist!</button>
+      <button id="submit-btn">Generate Playlist</button>
+    </div>
   </div>
 
   <div id="playlist-container" style="display:none;">
-    <h2 id="playlist-name">Your Custom Playlist</h2>
-    <h3>Hi, <span id="display-name"></span>! Here's your playlist:</h3>
-    <div id="playlist"></div>
-  </div>
+   <h2 id="playlist-name">Your Custom Playlist</h2>
+   <h3>Hi, <span id="display-name"></span>! Here's your playlist:</h3>
+   <div id="playlist"></div>
+</div>
 
   <script src="script.js"></script>
 </body>

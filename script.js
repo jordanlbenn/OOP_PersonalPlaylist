@@ -29,32 +29,32 @@ const playlists = {
     Upbeat: {
         songs: [
             { title: "Blinding Lights", artist: "The Weeknd", cover: "/Albums/blindinglights.jpeg" },
-            { title: "Feels Like Summer", artist: "Childish Gambino", cover: "/Albums/uptownfunk.jpeg" },
+            { title: "Feels Like Summer", artist: "Childish Gambino", cover: "/Albums/feelslikesummer.png" },
             { title: "BE YOUR GIRL", artist: "Teedra Moses - KAYTRANADA Remix", cover: "/Albums/beyourgirl.jpeg" },
             { title: "Sunshine", artist: "Steve Lacy feat. Fousheé", cover: "/Albums/sunshine.jpeg" }
         ]
     },
     Chill: {
         songs: [
-            { title: "Cece's Interlude", artist: "Drake", cover: "images/chill1.jpg" },
-            { title: "Awkward", artist: "SZA", cover: "images/chill2.jpg" },
-            { title: "All I Want Is You", artist: "Miguel, J.Cole", cover: "/Albums/uptownfunk.jpeg" },
-            { title: "The Way", artist: "Jill Scott", cover: "/Albums/uptownfunk.jpeg" }
+            { title: "Cece's Interlude", artist: "Drake", cover: "/Albums/cecesint.jpeg" },
+            { title: "Awkward", artist: "SZA", cover: "/Albums/awkward.jpeg" },
+            { title: "All I Want Is You", artist: "Miguel, J.Cole", cover: "/Albums/alliwant.jpeg" },
+            { title: "The Way", artist: "Jill Scott", cover: "/Albums/jill.jpeg" }
         ]
     },
     Sad: {
         songs: [
-            { title: "Someone Like You", artist: "Adele", cover: "images/sad1.jpg" },
-            { title: "Fix You", artist: "Coldplay", cover: "images/sad2.jpg" },
-            { title: "Show Me How", artist: "Men I Trust", cover: "/Albums/uptownfunk.jpeg" }
+            { title: "Someone Like You", artist: "Adele", cover: "/Albums/adele.jpeg" },
+            { title: "Fix You", artist: "Coldplay", cover: "/Albums/coldplay.jpeg" },
+            { title: "Show Me How", artist: "Men I Trust", cover: "/Albums/menitrust.jpeg" }
         ]
     },
     Energetic: {
         songs: [
-            { title: "Yeah Glo!", artist: "GloRilla", cover: "images/energetic1.jpg" },
-            { title: "Stronger", artist: "Kanye West", cover: "images/energetic2.jpg" },
-            { title: "Persuasive", artist: "Doechii, SZA", cover: "/Albums/uptownfunk.jpeg" },
-            { title: "Champions", artist: "Kanye West & Others", cover: "/Albums/uptownfunk.jpeg" }
+            { title: "Yeah Glo!", artist: "GloRilla", cover: "/Albums/yeahglo.jpeg" },
+            { title: "Stronger", artist: "Kanye West", cover: "/Albums/stronger.jpeg" },
+            { title: "Persuasive", artist: "Doechii, SZA", cover: "/Albums/doechii.jpeg" },
+            { title: "Champions", artist: "Kanye West & Others", cover: "/Albums/champions.png" }
         ]
     }
 };
